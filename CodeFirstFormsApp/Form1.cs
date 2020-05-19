@@ -133,5 +133,31 @@ namespace CodeFirstFormsApp
 
             }
         }
+
+        private void salesDataGridView_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
+        {
+            if(MessageBox.Show("Are you sure you want to delete this sale?", "Delete",
+                MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.No)
+            {
+                e.Cancel = true;
+                return;
+            }
+
+            var salesId = (int)e.Row.Cells[0].Value;
+
+            using (var context = new SalesContext())
+            {
+                var sale = context.Sales.SingleOrDefault(p => p.Id == salesId);
+
+                if (sale != null)
+                {
+                    context.Sales.Remove(sale);
+                    var result = context.SaveChanges();
+
+                    MessageBox.Show(string.Format("{0} sales deleted.", result));
+                }
+            }
+
+        }
     }
 }
