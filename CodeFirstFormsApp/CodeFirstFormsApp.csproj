@@ -71,6 +71,14 @@
     <Compile Include="Migrations\202005191134238_SalesTargets.designer.cs">
       <DependentUpon>202005191134238_SalesTargets.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202005191601233_to.cs" />
+    <Compile Include="Migrations\202005191601233_to.designer.cs">
+      <DependentUpon>202005191601233_to.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005191740005_Nam Changs.cs" />
+    <Compile Include="Migrations\202005191740005_Nam Changs.designer.cs">
+      <DependentUpon>202005191740005_Nam Changs.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\BaseModel.cs" />
     <Compile Include="Interfaces\IActive.cs" />
@@ -88,6 +96,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202005191134238_SalesTargets.resx">
       <DependentUpon>202005191134238_SalesTargets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005191601233_to.resx">
+      <DependentUpon>202005191601233_to.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005191740005_Nam Changs.resx">
+      <DependentUpon>202005191740005_Nam Changs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

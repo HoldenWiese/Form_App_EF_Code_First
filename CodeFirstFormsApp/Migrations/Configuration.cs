@@ -30,7 +30,7 @@
                     Id = 1,
                     Name = "North Region",
                     SalesTarget = 10000.00M,
-                    UpdateBy = "Admin",
+                    UpdatedBy = "Admin",
                     UpdatedDate = DateTime.Now
                 },
                 new Models.SalesRegion
@@ -42,7 +42,7 @@
                     Id = 2,
                     Name = "South Region",
                     SalesTarget = 10000.00M,
-                    UpdateBy = "Admin",
+                    UpdatedBy = "Admin",
                     UpdatedDate = DateTime.Now
                 }
             );
@@ -53,12 +53,28 @@
                     Active = true,
                     CreatedBy = "Admin",
                     CreatedDate = DateTime.Now,
-                    FirstName = "Bob",
+                    FirstName = "Holden",
                     Id = 1,
-                    LastName = "Smith",
+                    LastName = "Wiese",
                     RegionId = 1,
                     SalesTarget = 2000.00M,
-                    UpdateBy = "Admin",
+                    UpdatedBy = "Admin",
+                    UpdatedDate = DateTime.Now
+                }
+            );
+            context.People.AddOrUpdate(
+                p => p.Id,
+                new SalesPerson
+                {
+                    Active = true,
+                    CreatedBy = "Admin",
+                    CreatedDate = DateTime.Now,
+                    FirstName = "Jen",
+                    Id = 2,
+                    LastName = "Hardin",
+                    RegionId = 1,
+                    SalesTarget = 2000.00M,
+                    UpdatedBy = "Admin",
                     UpdatedDate = DateTime.Now
                 }
             );
@@ -73,7 +89,7 @@
                     Id = 1,
                     PersonId = 1,
                     RegionId = 1,
-                    UpdateBy = "Admin",
+                    UpdatedBy = "Admin",
                     UpdatedDate = DateTime.Now
                 }
             );

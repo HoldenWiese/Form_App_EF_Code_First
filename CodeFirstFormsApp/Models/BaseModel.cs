@@ -21,8 +21,9 @@ namespace CodeFirstFormsApp.Models
         public DateTime CreatedDate { get; set; }
         [Required]
 
-        public string UpdateBy { get; set; }
+        public string UpdatedBy { get; set; }
         [Required]
+
         public DateTime UpdatedDate { get; set; }
     }
 }

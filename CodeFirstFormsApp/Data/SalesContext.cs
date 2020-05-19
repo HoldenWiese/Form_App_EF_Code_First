@@ -56,7 +56,7 @@ namespace CodeFirstFormsApp.Data
                 createdEntity.CreatedDate = DateTime.Now;
                 createdEntity.CreatedBy = Environment.UserName;
                 createdEntity.UpdatedDate = DateTime.Now;
-                createdEntity.UpdateBy = Environment.UserName;
+                createdEntity.UpdatedBy = Environment.UserName;
             }
 
             var updatedEntities = stateManager //62-74 Tracks updated entities and populates details in DB
@@ -70,7 +70,7 @@ namespace CodeFirstFormsApp.Data
                 updatedEntity.CreatedDate = DateTime.Now;
                 updatedEntity.CreatedBy = Environment.UserName;
                 updatedEntity.UpdatedDate = DateTime.Now;
-                updatedEntity.UpdateBy = Environment.UserName;
+                updatedEntity.UpdatedBy = Environment.UserName;
             }
 
             return base.SaveChanges();
