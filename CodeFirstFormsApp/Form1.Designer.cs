@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.peopleComboBox = new System.Windows.Forms.ComboBox();
             this.salesPersonBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.regionComboBox = new System.Windows.Forms.ComboBox();
@@ -53,11 +53,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.salesPersonBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesRegionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.saleBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.newAmountNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // peopleComboBox
@@ -68,7 +70,7 @@
             this.peopleComboBox.FormattingEnabled = true;
             this.peopleComboBox.Location = new System.Drawing.Point(12, 268);
             this.peopleComboBox.Name = "peopleComboBox";
-            this.peopleComboBox.Size = new System.Drawing.Size(208, 24);
+            this.peopleComboBox.Size = new System.Drawing.Size(283, 24);
             this.peopleComboBox.TabIndex = 0;
             this.peopleComboBox.ValueMember = "Id";
             // 
@@ -82,9 +84,9 @@
             this.regionComboBox.DisplayMember = "Name";
             this.regionComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.regionComboBox.FormattingEnabled = true;
-            this.regionComboBox.Location = new System.Drawing.Point(242, 268);
+            this.regionComboBox.Location = new System.Drawing.Point(313, 268);
             this.regionComboBox.Name = "regionComboBox";
-            this.regionComboBox.Size = new System.Drawing.Size(207, 24);
+            this.regionComboBox.Size = new System.Drawing.Size(300, 24);
             this.regionComboBox.TabIndex = 1;
             this.regionComboBox.ValueMember = "Id";
             // 
@@ -94,9 +96,9 @@
             // 
             // refreshSalesButton
             // 
-            this.refreshSalesButton.Location = new System.Drawing.Point(242, 308);
+            this.refreshSalesButton.Location = new System.Drawing.Point(313, 308);
             this.refreshSalesButton.Name = "refreshSalesButton";
-            this.refreshSalesButton.Size = new System.Drawing.Size(207, 37);
+            this.refreshSalesButton.Size = new System.Drawing.Size(300, 37);
             this.refreshSalesButton.TabIndex = 2;
             this.refreshSalesButton.Text = "Refresh Data";
             this.refreshSalesButton.UseVisualStyleBackColor = true;
@@ -118,9 +120,8 @@
             this.salesDataGridView.Name = "salesDataGridView";
             this.salesDataGridView.RowHeadersWidth = 51;
             this.salesDataGridView.RowTemplate.Height = 24;
-            this.salesDataGridView.Size = new System.Drawing.Size(437, 215);
+            this.salesDataGridView.Size = new System.Drawing.Size(601, 215);
             this.salesDataGridView.TabIndex = 3;
-            this.salesDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.salesDataGridView.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.salesDataGridView_CellEndEdit);
             this.salesDataGridView.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.salesDataGridView_UserDeletingRow);
             // 
@@ -137,9 +138,9 @@
             // amountDataGridViewTextBoxColumn
             // 
             this.amountDataGridViewTextBoxColumn.DataPropertyName = "Amount";
-            dataGridViewCellStyle5.Format = "C2";
-            dataGridViewCellStyle5.NullValue = null;
-            this.amountDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Format = "C2";
+            dataGridViewCellStyle1.NullValue = null;
+            this.amountDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
             this.amountDataGridViewTextBoxColumn.HeaderText = "Amount";
             this.amountDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.amountDataGridViewTextBoxColumn.Name = "amountDataGridViewTextBoxColumn";
@@ -148,9 +149,9 @@
             // dateDataGridViewTextBoxColumn
             // 
             this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
-            dataGridViewCellStyle6.Format = "d";
-            dataGridViewCellStyle6.NullValue = null;
-            this.dateDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Format = "d";
+            dataGridViewCellStyle2.NullValue = null;
+            this.dateDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
             this.dateDataGridViewTextBoxColumn.HeaderText = "Date";
             this.dateDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
@@ -174,7 +175,7 @@
             // 
             this.salesTargetButton.Location = new System.Drawing.Point(12, 308);
             this.salesTargetButton.Name = "salesTargetButton";
-            this.salesTargetButton.Size = new System.Drawing.Size(208, 37);
+            this.salesTargetButton.Size = new System.Drawing.Size(283, 37);
             this.salesTargetButton.TabIndex = 4;
             this.salesTargetButton.Text = "Sales Person Target";
             this.salesTargetButton.UseVisualStyleBackColor = true;
@@ -190,14 +191,14 @@
             0,
             0});
             this.newAmountNumericUpDown.Name = "newAmountNumericUpDown";
-            this.newAmountNumericUpDown.Size = new System.Drawing.Size(208, 22);
+            this.newAmountNumericUpDown.Size = new System.Drawing.Size(283, 22);
             this.newAmountNumericUpDown.TabIndex = 5;
             // 
             // newDateDateTimePicker
             // 
             this.newDateDateTimePicker.Location = new System.Drawing.Point(12, 484);
             this.newDateDateTimePicker.Name = "newDateDateTimePicker";
-            this.newDateDateTimePicker.Size = new System.Drawing.Size(224, 22);
+            this.newDateDateTimePicker.Size = new System.Drawing.Size(283, 22);
             this.newDateDateTimePicker.TabIndex = 6;
             // 
             // newPersonComboBox
@@ -206,9 +207,9 @@
             this.newPersonComboBox.DisplayMember = "FullName";
             this.newPersonComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.newPersonComboBox.FormattingEnabled = true;
-            this.newPersonComboBox.Location = new System.Drawing.Point(242, 435);
+            this.newPersonComboBox.Location = new System.Drawing.Point(313, 437);
             this.newPersonComboBox.Name = "newPersonComboBox";
-            this.newPersonComboBox.Size = new System.Drawing.Size(207, 24);
+            this.newPersonComboBox.Size = new System.Drawing.Size(300, 24);
             this.newPersonComboBox.TabIndex = 7;
             this.newPersonComboBox.ValueMember = "Id";
             // 
@@ -218,9 +219,9 @@
             this.newRegionComboBox.DisplayMember = "Name";
             this.newRegionComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.newRegionComboBox.FormattingEnabled = true;
-            this.newRegionComboBox.Location = new System.Drawing.Point(242, 482);
+            this.newRegionComboBox.Location = new System.Drawing.Point(313, 482);
             this.newRegionComboBox.Name = "newRegionComboBox";
-            this.newRegionComboBox.Size = new System.Drawing.Size(207, 24);
+            this.newRegionComboBox.Size = new System.Drawing.Size(301, 24);
             this.newRegionComboBox.TabIndex = 8;
             this.newRegionComboBox.ValueMember = "Id";
             // 
@@ -228,7 +229,7 @@
             // 
             this.newSaleButton.Location = new System.Drawing.Point(12, 512);
             this.newSaleButton.Name = "newSaleButton";
-            this.newSaleButton.Size = new System.Drawing.Size(437, 35);
+            this.newSaleButton.Size = new System.Drawing.Size(601, 35);
             this.newSaleButton.TabIndex = 9;
             this.newSaleButton.Text = "Submit New Sale";
             this.newSaleButton.UseVisualStyleBackColor = true;
@@ -237,7 +238,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(177, 375);
+            this.label1.Location = new System.Drawing.Point(258, 380);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(105, 17);
             this.label1.TabIndex = 10;
@@ -255,7 +256,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(273, 415);
+            this.label3.Location = new System.Drawing.Point(404, 417);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(133, 17);
             this.label3.TabIndex = 12;
@@ -273,7 +274,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(310, 462);
+            this.label5.Location = new System.Drawing.Point(435, 464);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(53, 17);
             this.label5.TabIndex = 14;
@@ -283,7 +284,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(466, 559);
+            this.ClientSize = new System.Drawing.Size(625, 559);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -307,6 +308,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.salesDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.saleBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.newAmountNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -336,6 +338,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn UpdateBy;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.BindingSource bindingSource1;
     }
 }
 

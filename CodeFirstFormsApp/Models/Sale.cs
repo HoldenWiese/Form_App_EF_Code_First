@@ -22,11 +22,9 @@ namespace CodeFirstFormsApp.Models
         [Required]
         public int PersonId { get; set; }               //** This is the Id property. PersonId and Person are related. Naming is important.
 
-
         public virtual SalesRegion Region { get; set; } 
 
         [Required]
         public int RegionId { get; set; } //One-to-one relationship
-
     }
 }

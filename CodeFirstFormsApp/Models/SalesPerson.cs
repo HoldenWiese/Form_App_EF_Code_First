@@ -8,21 +8,20 @@ using System.Threading.Tasks;
 
 namespace CodeFirstFormsApp.Models
 {
-    //A sales person belongs to a region
-    class SalesPerson : BaseModel , IActive
+    class SalesPerson : BaseModel , IActive //A sales person belongs to a region
     {
         [Required]
         public bool Active { get; set; }
 
         [Required] //These are data annotations. EF has defaults, but we may specify 
         [StringLength(100)]
+
         public string FirstName { get; set; }
         [Required]
         [StringLength(100)]
         public string LastName { get; set; }
 
         public virtual SalesRegion Region { get; set; }
-
 
         //To connect to a model we need one property for the model itself. And one property for the models Id.
         [Required]

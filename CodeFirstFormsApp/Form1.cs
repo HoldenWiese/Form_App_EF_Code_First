@@ -24,11 +24,6 @@ namespace CodeFirstFormsApp
             GetLists();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void GetLists()
         {
             using (var context = new SalesContext())
@@ -43,7 +38,6 @@ namespace CodeFirstFormsApp
                     .Where(e => e.Active)
                     .OrderBy(e => e.Name)
                     .ToList();
-
             }
         }
 
@@ -79,7 +73,6 @@ namespace CodeFirstFormsApp
                         person.FullName, person.SalesTarget));
                 }
             }
-
         }
 
         private void newSaleButton_Click(object sender, EventArgs e)
@@ -104,7 +97,6 @@ namespace CodeFirstFormsApp
             }
 
             GetSales();
-
         }
 
         private void salesDataGridView_CellEndEdit(object sender, DataGridViewCellEventArgs e)
@@ -129,8 +121,6 @@ namespace CodeFirstFormsApp
 
                     }
                 }
-
-
             }
         }
 
@@ -157,7 +147,6 @@ namespace CodeFirstFormsApp
                     MessageBox.Show(string.Format("{0} sales deleted.", result));
                 }
             }
-
         }
     }
 }
