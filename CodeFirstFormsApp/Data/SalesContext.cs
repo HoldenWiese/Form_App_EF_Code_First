@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace CodeFirstFormsApp.Data
 {
-    class SalesContext : DbContext //DbContext lets us query DB and make changes.
+    class SalesContext : DbContext //DbContext lets us query DB and make changes
     {
         public DbSet<Sale> Sales { get; set; } //This DbSet allows us to get all data from the Sales Table
 

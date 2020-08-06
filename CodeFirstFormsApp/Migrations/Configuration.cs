@@ -78,6 +78,22 @@
                     UpdatedDate = DateTime.Now
                 }
             );
+            context.People.AddOrUpdate(
+                p => p.Id,
+                new SalesPerson
+                {
+                    Active = true,
+                    CreatedBy = "Admin",
+                    CreatedDate = DateTime.Now,
+                    FirstName = "John",
+                    Id = 3,
+                    LastName = "Taylor",
+                    RegionId = 2,
+                    SalesTarget = 3000.00M,
+                    UpdatedBy = "Admin",
+                    UpdatedDate = DateTime.Now
+                }
+            );
             context.Sales.AddOrUpdate(
                 p => p.Id,
                 new Sale
